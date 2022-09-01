@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@model User
+
+<div class="text-center">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Register to this Cool Site!</h1>
+        <a href="/login">Login</a>
+    </div>
+
+    <Form action="/register" method="post">
+        <div class="form-group">
+            <label for="FirstName">First Name</label>
+            <input class="form-control" asp-for="FirstName">
+            <span class="text-danger" asp-validation-for="FirstName"></span>
+        </div>
+        <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input class="form-control" asp-for="LastName">
+            <span class="text-danger" asp-validation-for="LastName"></span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input class="form-control" asp-for="Email">
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input class="form-control" asp-for="Password">
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group">
+            <label for="Confirm">Confirm Password</label>
+            <input class="form-control" asp-for="Confirm">
+            <span class="text-danger" asp-validation-for="Confirm"></span>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Sign Up Now">
+    </Form>
+</div>
